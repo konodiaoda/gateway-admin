@@ -1,7 +1,7 @@
 // ==============================|| MAIN ROUTING ||============================== //
 import React, {lazy} from "react";
 import MainLayout from "@/layout/MainLayout";
-import Loadable from "src/layout/Loadable";
+import Loadable from "@/layout/Loadable";
 
 const Default = Loadable(lazy(() => import('../pages/dashboard/Default').then(({Default}) => ({default: Default}))));
 

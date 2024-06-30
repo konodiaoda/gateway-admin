@@ -3,8 +3,9 @@ import {CustomThemeProvider} from "@/layout/customThemeProvider";
 import {I18nextProvider} from "react-i18next";
 import i18n from "@/config/i18n";
 import React from 'react'
-import NavigationScroll from "src/layout/NavigationScroll";
+import NavigationScroll from "@/layout/NavigationScroll";
 import Routers from "@/routers";
+import {RouterProvider} from "react-router-dom";
 
 const App = () => {
     const queryClient = new QueryClient({
@@ -21,7 +22,7 @@ const App = () => {
             <I18nextProvider i18n={i18n}>
                 <NavigationScroll>
                     <CustomThemeProvider>
-                        <Routers/>
+                        <RouterProvider router={Routers} />
                     </CustomThemeProvider>
                 </NavigationScroll>
             </I18nextProvider>
