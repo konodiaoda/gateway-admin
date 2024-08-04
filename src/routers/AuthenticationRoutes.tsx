@@ -9,7 +9,6 @@ const ForgotPassWord = Loadable(lazy(() => import('../pages/authLogin/ForgotPass
 const CheckMail = Loadable(lazy(() => import('../pages/authLogin/CheckMail').then(({CheckMail}) => ({default: CheckMail}))));
 const Register = Loadable(lazy(() => import('../pages/authLogin/Register').then(({Register}) => ({default: Register}))));
 const CodeVerification = Loadable(lazy(() => import('../pages/authLogin/CodeVerification').then(({CodeVerification}) => ({default: CodeVerification}))));
-const DisplayVulnerabilityRes = Loadable(lazy(() => import('../pages/displayVulnerabilityRes/index').then(({DisplayVulnerabilityRes}) => ({default: DisplayVulnerabilityRes}))));
 export const AuthenticationRoutes: RouteObject =
     {
         path: "/",
@@ -35,10 +34,6 @@ export const AuthenticationRoutes: RouteObject =
             {
                 path: "code-verification",
                 element: CodeVerification,
-            },
-            {
-                path: "demo",
-                element: DisplayVulnerabilityRes,
             }
         ]
     }

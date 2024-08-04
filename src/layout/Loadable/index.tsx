@@ -1,7 +1,7 @@
-import React, {Suspense} from "react";
+import React, {LazyExoticComponent, Suspense} from "react";
 import Loader from "@/layout/Loadable/Loader";
 
-const Loadable = (Component: any) => {
+const Loadable = (Component: LazyExoticComponent<any>) => {
     return (
         <Suspense fallback={<Loader/>}>
             <Component/>
